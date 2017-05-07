@@ -1,6 +1,6 @@
 ## Compiling
 
-Supposing you use [http://vasalf.net/ros-build.html](this guide) to build ROS from git sources.
+Supposing you use [this guide](http://vasalf.net/ros-build.html) to build ROS from git sources.
 
 Clone this repo to your workspace source directory, then run from the root of your workspace:
 
