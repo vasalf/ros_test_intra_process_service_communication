@@ -131,6 +131,8 @@ include_directories(${catkin_INCLUDE_DIRS})
 
 add_executable(test_self_service src/main.cpp)
 target_link_libraries(test_self_service ${catkin_LIBRARIES})
+add_executable(call_from_outside src/call_from_outside)
+target_link_libraries(call_from_outside ${catkin_LIBRARIES})
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -162,7 +164,7 @@ target_link_libraries(test_self_service ${catkin_LIBRARIES})
 # )
 
 ## Mark executables and/or libraries for installation
-install(TARGETS test_self_service test_self_service
+install(TARGETS test_self_service call_from_outside
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
