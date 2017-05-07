@@ -3,13 +3,17 @@
 
 bool accept_request(std_srvs::Empty::Request &req,
                     std_srvs::Empty::Response & res) {
-    ROS_INFO_STREAM("Accepted!");
+    ROS_INFO("Accepted!");
     return true;
 }
 
 bool ping_myself(ros::NodeHandle& nh) {
     ros::ServiceClient client = nh.serviceClient<std_srvs::Empty>("es");
     std_srvs::Empty srv;
+    if (!client.isValid()) {
+        ROS_INFO("The client is not valid.");
+        return false;
+    }
     return client.call(srv);
 }
 
