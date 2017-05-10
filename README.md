@@ -12,7 +12,8 @@ $ catkin_make_isolated --pkg test_intra_process_service_communication --install
 ## Running
 
 ```
-$ rosrun test_intra_proces_service_communication single_thread
+$ . ./install_isolated/setup.bash
+$ rosrun test_intra_process_service_communication single_thread
 ```
 
 It should produce some messages every 0.5 seconds.
