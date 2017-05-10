@@ -25,3 +25,12 @@ $ rosrun test_intra_proces_service_communication call_from_outside
 ```
 
 If everything is OK, it should terminate successfully.
+
+## Testing for thread-safety
+
+```
+$ . ./install_isolated/setup.bash
+$ rosrun test_intra_process_service_communication multiple_threads
+```
+
+It should print "Accepted!" messages for all its execution time.
